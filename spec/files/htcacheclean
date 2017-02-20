@@ -1,0 +1,18 @@
+### This file is managed by puppet, you can change the values but its not recommended
+
+#
+# Configuration options for systemd service, htcacheclean.service.
+# See htcacheclean(8) for more information on available options.
+#
+
+# Interval between cache clean runs, in minutes
+INTERVAL=30
+
+# Default cache root.
+CACHE_ROOT=/opt/apache/cache
+
+# Cache size limit in bytes (K=Kbytes, M=Mbytes)
+LIMIT=356M
+
+# Any other options...
+OPTIONS=

@@ -1,0 +1,18 @@
+### This file is managed by puppet, you can change the values but its not recommended
+
+#
+# Configuration options for systemd service, htcacheclean.service.
+# See htcacheclean(8) for more information on available options.
+#
+
+# Interval between cache clean runs, in minutes
+INTERVAL=<%= @clean_interval %>
+
+# Default cache root.
+CACHE_ROOT=<%= @cache_directory %>
+
+# Cache size limit in bytes (K=Kbytes, M=Mbytes)
+LIMIT=<%= @clean_limit %>
+
+# Any other options...
+OPTIONS=<%= @additional_options %>
