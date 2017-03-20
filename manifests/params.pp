@@ -10,4 +10,5 @@ class htcacheclean::params {
     $systemd_apache_required_dir = '/etc/systemd/system/httpd.service.requires'
     $systemd_apache_required_file = '/etc/systemd/system/httpd.service.requires/htcacheclean.service'
     $systemd_htcacheclean_service_file = '/usr/lib/systemd/system/htcacheclean.service'
+    $run_after_class = false
 }

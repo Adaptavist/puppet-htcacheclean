@@ -10,7 +10,13 @@ class htcacheclean  (
     $systemd_apache_required_dir       = $htcacheclean::params::systemd_apache_required_dir,
     $systemd_apache_required_file      = $htcacheclean::params::systemd_apache_required_file,
     $systemd_htcacheclean_service_file = $htcacheclean::params::systemd_htcacheclean_service_file,
+    $run_after_class                   = $htcacheclean::params::run_after_class,
     ) inherits htcacheclean::params {
+
+    # if we are to run after a specific other class enforce that
+    if ($run_after_class and $run_after_class != false and $run_after_class != 'false'){
+        Class[$run_after_class] -> Class['htcacheclean']
+    }
 
     case $::osfamily {
         'Debian': {
