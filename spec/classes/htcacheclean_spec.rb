@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'htcacheclean', :type => 'class' do
 
   fail_operatingsystemrelease = '5'
-  fail_operatintsystem = 'Windows'
+  fail_operatintsystem = 'Solaris'
   cache_directory = "/opt/apache/cache"
   config_file  = '/etc/sysconfig/htcacheclean'
   clean_interval = '30'

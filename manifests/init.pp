@@ -31,12 +31,10 @@ class htcacheclean  (
                     owner  => 'root',
                     group  => 'root',
                     mode   => '0755'
-                } ->
-                file {$systemd_apache_required_file:
+                } -> file {$systemd_apache_required_file:
                     ensure => 'link',
                     target => $systemd_htcacheclean_service_file
-                } ->
-                file {$config_file:
+                } -> file {$config_file:
                     ensure  => 'file',
                     content => template($config_template),
                     path    => $config_file,
@@ -44,8 +42,7 @@ class htcacheclean  (
                     group   => 'root',
                     mode    => '0755',
                     notify  => Exec['restart_apache']
-                } ->
-                service {$clean_service:
+                } -> service {$clean_service:
                     ensure => 'running'
                 }
 
