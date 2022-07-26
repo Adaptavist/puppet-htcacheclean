@@ -1,5 +1,5 @@
 name 'adaptavist-htcacheclean'
-version '0.0.3'
+version '0.0.4'
 source 'https://github.com/Adaptavist/puppet-htcacheclean.git'
 author 'adaptavist'
 summary 'HtCacheClean Module'
