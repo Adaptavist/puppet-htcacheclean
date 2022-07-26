@@ -23,7 +23,7 @@ class htcacheclean  (
             notice('htcacheclean - This module only runs on RedHat based systems')
         }
         'RedHat': {
-            if ($::operatingsystemmajrelease == '7' or $::operatingsystemmajrelease == '8') {
+            if ($::operatingsystemmajrelease == '7' or $::operatingsystemmajrelease == '8') or ($::operatingsystem == 'Amazon' and $::operatingsystemmajrelease == '2'){
                 # deploy config file
                 file {$systemd_apache_required_dir:
                     ensure => 'directory',
